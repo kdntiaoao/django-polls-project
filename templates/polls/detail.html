@@ -1,2 +1,7 @@
-<a href="{% url 'polls:index' %}">TOP</a>
-<h1>{{ question }}</h1>
+<body>
+  <a href="{% url 'polls:index' %}">TOP</a>
+  <h1>{{ question }}</h1>
+  {% for choice in question.choice_set.all %}
+    <li>{{ choice.choice_text }}</li>
+  {% endfor %}
+</body>
