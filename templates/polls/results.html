@@ -1,4 +1,6 @@
-<body>
+{% extends 'base.html' %}
+
+{% block main %}
   <a href="{% url 'polls:index' %}">TOP</a>
   <h1>{{ question.question_text }}</h1>
   <ul>
@@ -7,4 +9,4 @@
     {% endfor %}
   </ul>
   <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
-</body>
+{% endblock %}

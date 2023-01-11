@@ -1,4 +1,6 @@
-<body>
+{% extends 'base.html' %}
+
+{% block main %}
   <a href="{% url 'polls:index' %}">TOP</a>
   <form action="{% url 'polls:vote' question.id %}" method="post">
     {% csrf_token %}
@@ -15,4 +17,4 @@
     </fieldset>
     <button type="submit">Vote</button>
   </form>
-</body>
+{% endblock %}

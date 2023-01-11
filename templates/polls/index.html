@@ -1,4 +1,6 @@
-<body>
+{% extends 'base.html' %}
+
+{% block main %}
   {% if latest_question_list %}
     <ul>
       {% for question in latest_question_list %}
@@ -10,4 +12,4 @@
   {% else %}
     <p>投稿がありません。</p>
   {% endif %}
-</body>
+{% endblock %}
